@@ -30,9 +30,6 @@ const config: Config = {
           
         }
       }
-
-     
-
     },
   },
   plugins: [],
