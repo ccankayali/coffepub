@@ -1,8 +1,11 @@
+import Navbar from '@/components/Navbar/Navbar'
 import React from 'react'
 
 function page() {
   return (
-    <div className='bg-primary'>page</div>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
