@@ -1,12 +1,33 @@
-import Navbar from '@/components/Navbar/Navbar'
-import React from 'react'
+"use client"; // Add this line at the top
 
-function page() {
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Navbar from '@/components/Navbar/Navbar';
+import Hero from '@/components/Hero/Hero';
+import Services from '@/components/Services/Services';
+import Banner from '@/components/Banner/Banner';
+import Footer from '@/components/Footer/Footer';
+
+function Page() {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  }, []);
+
   return (
-    <div>
+    <>
       <Navbar />
-    </div>
-  )
+      <Hero />
+      <Services />
+      <Banner />
+      <Footer />
+    </>
+  );
 }
 
-export default page
+export default Page;
